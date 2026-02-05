@@ -2230,9 +2230,10 @@ packages:
   thingsboard_pe_client:
     dependency: "direct main"
     description:
-      path: "/Users/glibgarkovenko/Desktop/tb/clients/dart_thingsboard_pe_client"
-      relative: false
-    source: path
+      name: thingsboard_pe_client
+      sha256: "25bfa5cbb994c7e772acabe99204d6f900f4e957c436907ac76013df1ccfdcc7"
+      url: "https://pub.dev"
+    source: hosted
     version: "4.1.0"
   time:
     dependency: transitive
