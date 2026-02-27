@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thingsboard_app/locator.dart';
+import 'package:go_router/go_router.dart';
 import 'package:thingsboard_app/locator.dart';
 import 'package:thingsboard_app/modules/dashboard/di/dashboards_di.dart';
 import 'package:thingsboard_app/modules/dashboard/presentation/controller/dashboard_controller.dart';
@@ -47,24 +47,25 @@ class _SingleDashboardViewState extends State<SingleDashboardView>
 
     return Scaffold(
       appBar: TbAppBar(
-        leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-          onPressed: () async {
-            if (_dashboardController?.rightLayoutOpened.value == true) {
-              await _dashboardController?.toggleRightLayout();
-              return;
-            }
-
-            final controller = _dashboardController?.controller;
-            if (await controller?.canGoBack() == true) {
-              await controller?.goBack();
-            } else {
-              if (context.mounted) {
-                Navigator.of(context).pop();
-              }
-            }
-          },
-        ),
+        leading: context.canPop()
+          ? IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () async {
+                if (_dashboardController?.rightLayoutOpened.value == true) {
+                  await _dashboardController?.toggleRightLayout();
+                  return;
+                }
+                final controller = _dashboardController?.controller;
+                if (await controller?.canGoBack() == true) {
+                  await controller?.goBack();
+                } else {
+                  if (context.mounted) {
+                    Navigator.of(context).pop();
+                  }
+                }
+              },
+            )
+          : null,
         elevation: 1,
         shadowColor: Colors.transparent,
         title: ValueListenableBuilder<String>(
