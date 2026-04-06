@@ -65,17 +65,15 @@ mixin AssetsBase on EntitiesBase<Asset, PageLink> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Flexible(
-                            child: FittedBox(
-                              fit: BoxFit.fitWidth,
-                              alignment: Alignment.centerLeft,
-                              child: Text(
-                                asset.name,
-                                style: const TextStyle(
-                                  color: Color(0xFF282828),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  height: 20 / 14,
-                                ),
+                            child: Text(
+                              asset.name,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                color: Color(0xFF282828),
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                                height: 20 / 14,
                               ),
                             ),
                           ),
@@ -132,17 +130,15 @@ mixin AssetsBase on EntitiesBase<Asset, PageLink> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      FittedBox(
-                        fit: BoxFit.fitWidth,
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          asset.name,
-                          style: const TextStyle(
-                            color: Color(0xFF282828),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            height: 1.7,
-                          ),
+                      Text(
+                        asset.name,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          color: Color(0xFF282828),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                          height: 1.7,
                         ),
                       ),
                       Text(

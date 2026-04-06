@@ -3342,6 +3342,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Saved to platform 'Image gallery'`
+  String get imageSavedToGallery {
+    return Intl.message(
+      'Saved to platform \'Image gallery\'',
+      name: 'imageSavedToGallery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to save image`
+  String get failedToSaveImage {
+    return Intl.message(
+      'Failed to save image',
+      name: 'failedToSaveImage',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -3351,6 +3371,15 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
       Locale.fromSubtags(languageCode: 'ar'),
+      Locale.fromSubtags(languageCode: 'da', countryCode: 'DK'),
+      Locale.fromSubtags(languageCode: 'de', countryCode: 'DE'),
+      Locale.fromSubtags(languageCode: 'el', countryCode: 'GR'),
+      Locale.fromSubtags(languageCode: 'es', countryCode: 'ES'),
+      Locale.fromSubtags(languageCode: 'fr', countryCode: 'FR'),
+      Locale.fromSubtags(languageCode: 'it', countryCode: 'IT'),
+      Locale.fromSubtags(languageCode: 'nl', countryCode: 'NL'),
+      Locale.fromSubtags(languageCode: 'no', countryCode: 'NO'),
+      Locale.fromSubtags(languageCode: 'vi', countryCode: 'VN'),
       Locale.fromSubtags(languageCode: 'zh'),
       Locale.fromSubtags(languageCode: 'zh', countryCode: 'CN'),
       Locale.fromSubtags(languageCode: 'zh', countryCode: 'TW'),
