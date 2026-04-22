@@ -5,6 +5,7 @@ import 'package:thingsboard_app/modules/dashboard/di/dashboards_di.dart';
 import 'package:thingsboard_app/modules/dashboard/presentation/controller/dashboard_controller.dart';
 import 'package:thingsboard_app/modules/dashboard/presentation/view/dashboard_permission_error_view.dart';
 import 'package:thingsboard_app/modules/dashboard/presentation/widgets/dashboard_widget.dart';
+import 'package:thingsboard_app/utils/services/custom_translation/i_custom_translation_service.dart';
 import 'package:thingsboard_app/utils/services/tb_client_service/i_tb_client_service.dart';
 import 'package:thingsboard_app/utils/services/permission/i_permission_service.dart';
 import 'package:thingsboard_app/widgets/tb_app_bar.dart';
@@ -97,7 +98,8 @@ class _SingleDashboardViewState extends State<SingleDashboardView>
       body: SafeArea(
         child: DashboardWidget(
           titleCallback: (title) {
-            dashboardTitleValue.value = widget.title ?? title;
+            dashboardTitleValue.value = getIt<ICustomTranslationService>()
+                .translate(widget.title ?? title);
           },
           controllerCallback: (controller, _) {
             _dashboardController = controller;
@@ -148,7 +150,8 @@ class _SingleDashboardViewState extends State<SingleDashboardView>
     );
 
     if (widget.title != null) {
-      dashboardTitleValue.value = widget.title!;
+      dashboardTitleValue.value = getIt<ICustomTranslationService>()
+          .translate(widget.title);
     }
   }
 
