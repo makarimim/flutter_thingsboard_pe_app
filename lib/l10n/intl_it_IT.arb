@@ -450,5 +450,38 @@
   "schedulerEvent": "Evento dello scheduler",
   "youDontHavePermissionsToPerformThisOperation": "Non hai i permessi per eseguire questa operazione!",
   "imageSavedToGallery": "Salvato nella 'Galleria immagini'",
-  "failedToSaveImage": "Impossibile salvare l'immagine"
+  "failedToSaveImage": "Impossibile salvare l'immagine",
+  "nSelected": "{count} selezionati",
+  "@nSelected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectAll": "Seleziona tutti i caricati",
+  "failedToPerformOperation": "{count, plural, =1{1 operazione non riuscita} other{{count} operazioni non riuscite}}",
+  "@failedToPerformOperation": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "deleteSelectedNotifications": "{count, plural, =1{Eliminare 1 notifica?} other{Eliminare {count} notifiche?}}",
+  "@deleteSelectedNotifications": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "markSelectedNotificationsAsRead": "{count, plural, =1{Segnare 1 notifica come letta?} other{Segnare {count} notifiche come lette?}}",
+  "@markSelectedNotificationsAsRead": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
 }

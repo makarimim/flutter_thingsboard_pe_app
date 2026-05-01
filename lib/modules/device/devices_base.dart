@@ -24,10 +24,11 @@ import 'package:thingsboard_app/utils/utils.dart';
 mixin DevicesBase on EntitiesBase<EntityData, EntityDataQuery> {
   final IOverlayService overlayService = getIt();
   @override
-  String get title => 'Devices';
+  String title(BuildContext context) => S.of(context).devices(2);
 
   @override
-  String get noItemsFoundText => 'No devices found';
+  String noItemsFoundText(BuildContext context) =>
+      S.of(context).noDevicesFound;
   final tbClient = getIt<ITbClientService>().client;
   @override
   Future<PageData<EntityData>> fetchEntities(
@@ -284,6 +285,7 @@ class _DeviceCardState extends State<DeviceCard> {
                             Flexible(
                               fit: FlexFit.tight,
                               child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Row(
                                     mainAxisAlignment:
@@ -319,6 +321,22 @@ class _DeviceCardState extends State<DeviceCard> {
                                       ),
                                     ],
                                   ),
+                                  if (widget.device.field('label')?.isNotEmpty == true)
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 2),
+                                      child: Text(
+                                        widget.device.field('label')!,
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: const TextStyle(
+                                          color: Color(0xFFAFAFAF),
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.normal,
+                                          fontStyle: FontStyle.italic,
+                                          height: 16 / 12,
+                                        ),
+                                      ),
+                                    ),
                                   const SizedBox(height: 4),
                                   Row(
                                     mainAxisAlignment:
@@ -475,6 +493,22 @@ class _DeviceCardState extends State<DeviceCard> {
                     ),
                   ],
                 ),
+                if (widget.device.field('label')?.isNotEmpty == true)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2),
+                    child: Text(
+                      widget.device.field('label')!,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: Color(0xFFAFAFAF),
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                        fontStyle: FontStyle.italic,
+                        height: 16 / 12,
+                      ),
+                    ),
+                  ),
                 const SizedBox(height: 4),
                 Row(
                   mainAxisSize: MainAxisSize.min,
