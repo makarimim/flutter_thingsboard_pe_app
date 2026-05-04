@@ -450,5 +450,38 @@
   "schedulerEvent": "Planer-Ereignis",
   "youDontHavePermissionsToPerformThisOperation": "Sie haben keine Berechtigungen, um diesen Vorgang auszuführen!",
   "imageSavedToGallery": "In 'Bildergalerie' gespeichert",
-  "failedToSaveImage": "Bild konnte nicht gespeichert werden"
+  "failedToSaveImage": "Bild konnte nicht gespeichert werden",
+  "nSelected": "{count} ausgewählt",
+  "@nSelected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectAll": "Alle geladenen auswählen",
+  "failedToPerformOperation": "{count, plural, =1{1 Vorgang fehlgeschlagen} other{{count} Vorgänge fehlgeschlagen}}",
+  "@failedToPerformOperation": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "deleteSelectedNotifications": "{count, plural, =1{1 Benachrichtigung löschen?} other{{count} Benachrichtigungen löschen?}}",
+  "@deleteSelectedNotifications": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "markSelectedNotificationsAsRead": "{count, plural, =1{1 Benachrichtigung als gelesen markieren?} other{{count} Benachrichtigungen als gelesen markieren?}}",
+  "@markSelectedNotificationsAsRead": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
 }

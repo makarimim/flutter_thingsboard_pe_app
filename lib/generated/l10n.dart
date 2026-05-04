@@ -91,9 +91,64 @@ class S {
     return Intl.message('Assets', name: 'assets', desc: '', args: []);
   }
 
+  /// `Tenants`
+  String get tenants {
+    return Intl.message('Tenants', name: 'tenants', desc: '', args: []);
+  }
+
   /// `Audit Logs`
   String get auditLogs {
     return Intl.message('Audit Logs', name: 'auditLogs', desc: '', args: []);
+  }
+
+  /// `No customers found`
+  String get noCustomersFound {
+    return Intl.message(
+      'No customers found',
+      name: 'noCustomersFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No assets found`
+  String get noAssetsFound {
+    return Intl.message(
+      'No assets found',
+      name: 'noAssetsFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No tenants found`
+  String get noTenantsFound {
+    return Intl.message(
+      'No tenants found',
+      name: 'noTenantsFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No devices found`
+  String get noDevicesFound {
+    return Intl.message(
+      'No devices found',
+      name: 'noDevicesFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No audit logs found`
+  String get noAuditLogsFound {
+    return Intl.message(
+      'No audit logs found',
+      name: 'noAuditLogsFound',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Log Out`
@@ -3360,6 +3415,62 @@ class S {
       name: 'failedToSaveImage',
       desc: '',
       args: [],
+    );
+  }
+
+  /// `{count} selected`
+  String nSelected(int count) {
+    return Intl.message(
+      '$count selected',
+      name: 'nSelected',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Select all loaded`
+  String get selectAll {
+    return Intl.message(
+      'Select all loaded',
+      name: 'selectAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{count, plural, =1{1 operation failed} other{{count} operations failed}}`
+  String failedToPerformOperation(int count) {
+    return Intl.plural(
+      count,
+      one: '1 operation failed',
+      other: '$count operations failed',
+      name: 'failedToPerformOperation',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `{count, plural, =1{Delete 1 notification?} other{Delete {count} notifications?}}`
+  String deleteSelectedNotifications(int count) {
+    return Intl.plural(
+      count,
+      one: 'Delete 1 notification?',
+      other: 'Delete $count notifications?',
+      name: 'deleteSelectedNotifications',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `{count, plural, =1{Mark 1 notification as read?} other{Mark {count} notifications as read?}}`
+  String markSelectedNotificationsAsRead(int count) {
+    return Intl.plural(
+      count,
+      one: 'Mark 1 notification as read?',
+      other: 'Mark $count notifications as read?',
+      name: 'markSelectedNotificationsAsRead',
+      desc: '',
+      args: [count],
     );
   }
 }

@@ -449,5 +449,38 @@
   "schedulerEvent": "调度事件",
   "youDontHavePermissionsToPerformThisOperation": "您没有执行此操作的权限！",
   "imageSavedToGallery": "已保存到“图片库”",
-  "failedToSaveImage": "保存图片失败"
+  "failedToSaveImage": "保存图片失败",
+  "nSelected": "已选择 {count} 项",
+  "@nSelected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectAll": "全选已加载",
+  "failedToPerformOperation": "{count, plural, =1{1 项操作失败} other{{count} 项操作失败}}",
+  "@failedToPerformOperation": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "deleteSelectedNotifications": "{count, plural, =1{删除 1 条通知？} other{删除 {count} 条通知？}}",
+  "@deleteSelectedNotifications": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "markSelectedNotificationsAsRead": "{count, plural, =1{将 1 条通知标记为已读？} other{将 {count} 条通知标记为已读？}}",
+  "@markSelectedNotificationsAsRead": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
 }
