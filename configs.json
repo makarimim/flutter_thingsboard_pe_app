@@ -1,0 +1,11 @@
+{
+  "thingsboardApiEndpoint": "https://thingsboard.cloud",
+  "appLinksUrlHost": "thingsboard.cloud",
+  "appLinksUrlScheme": "https",
+  "registrationRedirectUrlScheme": "tbscheme",
+  "registrationRedirectUrlHost": "app.pe.thingsboard.org",
+  "androidApplicationId": "a.b.c",
+  "androidApplicationName": "Elli IoT",
+  "thingsboardOAuth2CallbackUrlScheme": "a.b.c.auth",
+  "thingsboardAndroidAppSecret": "M0xjSzhxM0ZadDRXdGh0SHVpVnozQnRLbkV1S0FONEFDYnpMcmxXTHg4UFJqYUlzMzdxT0tjSnEzSWFpSUpoVQ=="
+}
